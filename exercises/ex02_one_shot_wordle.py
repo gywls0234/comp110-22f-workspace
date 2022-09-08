@@ -9,8 +9,6 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-
-
 guess: str = input("What is your " + str(len(secret)) + "-letter guess? ")
 
 while len(guess) != len(secret):
