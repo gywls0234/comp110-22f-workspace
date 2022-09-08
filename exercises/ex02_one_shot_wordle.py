@@ -36,8 +36,6 @@ while index < len(secret):
 
 print(emojis)
 
-
-
 if guess == secret:
     print(f"Woo! You got it!")
 else:
