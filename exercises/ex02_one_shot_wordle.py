@@ -2,7 +2,6 @@
 
 __author__ = "730617586"
 
-
 secret = "python"
 index = 0
 emojis = ""
