@@ -1,7 +1,8 @@
 """EX05 - `list` Utility Functions."""
 
 __author__ = "730617586"
-from exercises.ex05.utils import only_evens, sub, concat
+
+from utils import only_evens, sub, concat
 
 
 def test_only_evens_empty() -> None: 
