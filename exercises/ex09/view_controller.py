@@ -1,8 +1,8 @@
 """The ViewController drives the visualization of the simulation."""
 
 from turtle import Turtle, Screen, _Screen, done
-from exercise.ex09.model import Model 
-from exercise.ex09 import constants
+from exercises.ex09.model import Model 
+from exercises.ex09 import constants
 from typing import Any
 from time import time_ns
 
@@ -44,7 +44,7 @@ class ViewController:
             self.pen.pendown()
             self.pen.color(cell.color())
             self.pen.dot(constants.CELL_RADIUS)
-        self.screen.updates()
+        self.screen.update()
 
         if self.model.is_complete():
             return

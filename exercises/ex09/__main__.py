@@ -2,15 +2,15 @@
 
 from exercises.ex09 import constants
 from exercises.ex09.model import Model
-from excercises.ex09.view_controller import ViewController
+from exercises.ex09.view_controller import ViewController
 
 
 def main() -> None:
     """Entrypoint of stimulation."""
-    model: Model = Model(constants.CELL_Count, constants.CELL_SPEED, constants.infected)
+    model: Model = Model(constants.CELL_COUNT, constants.CELL_SPEED, constants.CELL_INFECTED)
     view_controller: ViewController = ViewController(model)
-    view_controller.start_stimulation()
+    view_controller.start_simulation()
 
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
