@@ -3,6 +3,7 @@
 from __future__ import annotations
 from random import random
 from exercises.ex09 import constants
+<<<<<<< HEAD
 from math import sin, cos, pi, sqrt
 
 """Exercise 9."""
@@ -11,12 +12,25 @@ __author__ = "730617586"
 
 
 class Point: 
+=======
+from math import sin, cos, pi
+
+
+__author__ = ""  # TODO
+
+
+class Point:
+>>>>>>> 43442d78c273b343364e609fc640fdee64105e18
     """A model of a 2-d cartesian coordinate Point."""
     x: float
     y: float
 
     def __init__(self, x: float, y: float):
+<<<<<<< HEAD
         """Construct a point with x, t coordinates."""
+=======
+        """Construct a point with x, y coordinates."""
+>>>>>>> 43442d78c273b343364e609fc640fdee64105e18
         self.x = x
         self.y = y
 
@@ -26,6 +40,7 @@ class Point:
         y: float = self.y + other.y
         return Point(x, y)
 
+<<<<<<< HEAD
     def distance(self, other: Point) -> float:
         """Find distance between two points."""
         x: float = self.x - other.x
@@ -39,11 +54,20 @@ class Cell:
     location: Point
     direction: Point
     sickness: int = constants.VULNERABLE
+=======
+
+class Cell:
+    """An individual subject in the simulation."""
+    location: Point
+    direction: Point
+    sickness: int = 0
+>>>>>>> 43442d78c273b343364e609fc640fdee64105e18
 
     def __init__(self, location: Point, direction: Point):
         """Construct a cell with its location and direction."""
         self.location = location
         self.direction = direction
+<<<<<<< HEAD
         
     def tick(self) -> None:
         """Tick."""
@@ -177,3 +201,47 @@ class Model:
                     self.population[i].contact_with(self.population[j])
                 j += 1
             i += 1
+=======
+
+    # Part 1) Define a method named `tick` with no parameters.
+    # Its purpose is to reassign the object's location attribute
+    # the result of adding the self object's location with its
+    # direction. Hint: Look at the add method.
+        
+    def color(self) -> str:
+        """Return the color representation of a cell."""
+        return "black"
+
+
+class Model:
+    """The state of the simulation."""
+
+    population: list[Cell]
+    time: int = 0
+
+    def __init__(self, cells: int, speed: float):
+        """Initialize the cells with random locations and directions."""
+        self.population = []
+    
+    def tick(self) -> None:
+        """Update the state of the simulation by one time step."""
+        self.time += 1
+
+    def random_location(self) -> Point:
+        """Generate a random location."""
+        # TODO
+        return Point(0.0, 0.0)
+
+    def random_direction(self, speed: float) -> Point:
+        """Generate a 'point' used as a directional vector."""
+        # TODO
+        return Point(0.0, 0.0)
+
+    def enforce_bounds(self, cell: Cell) -> None:
+        """Cause a cell to 'bounce' if it goes out of bounds."""
+        ...
+
+    def is_complete(self) -> bool:
+        """Method to indicate when the simulation is complete."""
+        return False
+>>>>>>> 43442d78c273b343364e609fc640fdee64105e18
